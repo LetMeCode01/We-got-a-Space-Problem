@@ -8,27 +8,26 @@ to restore your ship's functionality!_
 
 ## Menu requirements(not finished yet)
 
--Intro message
--Start game
--Highscore
--Settings
--About (me!)
--How to play
+- Intro message
+- Start game
+- Highscore
+- Settings
+- About(me!)
+- How to play
 
 ## Components:
 
--Arduino board
--Breadboards
--Joystick
--1088AS matrix
--LCD Display(work in progress)
--Buzzer
--Button
--Rezistors and Capacitors
--Wires
--LDR photoresistor (to release from entrapment)
--Pause button(not yet implemented)
-
+- Arduino board
+- Breadboards
+- Joystick
+- 1088AS matrix
+- LCD Display(work in progress)
+- Buzzer(active)
+- Button
+- Rezistors and Capacitors
+- Wires
+- LDR photoresistor (to escape from entrapment)
+- Pause button(not yet implemented)
 
 
 ### 🎥 Demo Video
