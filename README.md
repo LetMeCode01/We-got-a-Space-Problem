@@ -41,3 +41,22 @@ to restore your ship's functionality!_
 
 ### 💻 Code
 [![View Code](https://img.shields.io/badge/💻%20View%20Code-blue?style=for-the-badge)](https://github.com/LetMeCode01/We-got-a-Space-Problem/blob/sketch_matrix_project.ino)
+
+
+
+## Extra ideas for final project-homework
+
+Adding 2 players for the game - that implies:
+
+- 2 joysticks
+- 2 LDR sensors
+- 2 active buzzer for players
+- 1 passive buzzer for game sounds and theme
+
+
+
+Also, using minimum 2 LED matrixes, that implies using 2 MAX7219 drivers, OR:
+
+If the 4 MAX7221Max drivers that I ordered will arrive in time, I will use two bicolor LED 5088AS matrixes (red and green), each one using two MAX7221 drivers (they do not work with MAX7219CNG drivers, I learnt that the hard way!). 
+
+I also want to use an Arduino MEGA, if possible(I just want space)
