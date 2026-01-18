@@ -1,62 +1,143 @@
-# We-got-a-Space-Problem
+# 🚀 We Got a Space Problem – Final Project Documentation
 
-_In this game, you have to help Han navigate through the galaxy, around the stars,
-and collect tokens from all four zones of it. Be careful of lustful enemies: after you
-collect a token, someone will place an X-ray bomb to try and take your life! Also,
-at random points, your ship will stall, and you'll have to summon your dark passenger
-to restore your ship's functionality!_
 
-## Menu requirements(not finished yet)
+## This github repository contains/ will contain:
 
-- Intro message
-- Start game
-- Highscore
-- Settings
-- About(me!)
-- How to play
+1. source code
+2. project description
+3. setup images
+4. demo video
 
-## Components:
+## 📝 General Description
 
-- Arduino board
+**We Got a Space Problem** is an interactive arcade-style game built on the Arduino platform. The player controls a spaceship navigating through a galaxy displayed on an LED matrix, collecting tokens while avoiding enemies and hazardous events.
+
+### The game features:
+
+- real-time joystick control
+- visual feedback via LED matrices and LCD display
+- audio feedback using buzzers
+- random in-game events (ship stalling, X-ray bombs)
+- physical interaction through sensors (LDR)
+
+**For the final project, the game is expanded to support two players, a larger display area, and more complex hardware interactions.**
+
+## 🧾 BOM (Bill of Materials)
+
+###🧠 Main Components
+
+- Arduino board (UNO -> MEGA)
 - Breadboards
-- Joystick
-- 1088AS matrix
-- LCD Display(work in progress)
-- Buzzer(active)
-- Button
-- Rezistors and Capacitors
-- Wires
-- LDR photoresistor (to escape from entrapment)
-- Pause button(not yet implemented)
+- Connecting wires
+- Resistors and capacitors
+
+###🎮 Input Devices
+
+- 2 × Joysticks
+- 2 × LDR photoresistors
+- Push buttons (Start, Pause, etc.)
+
+### 📤 Output Devices
+
+- 2 x LED matrices (5088AS bicolor)
+- 4 x MAX7221 drivers
+- LCD display (menu and game information)
+- Active and passive buzzers (player feedback, game sounds and theme)
 
 
-### 🎥 Demo Video
+## 📚 Tutorial Source
 
-[![Watch Video](https://img.shields.io/badge/▶️%20Video-red?style=for-the-badge)](https://youtube.com/shorts/0MiaP8hC6qI?feature=share)
+**This project does not follow a specific tutorial.**
 
-### 📸 Setup
+Only small references were used, such as:
+
+1. Arduino official documentation
+2. Example code for MAX7221
+3. Joystick and LED matrix usage references
+4. The game logic, hardware architecture, and gameplay mechanics are original.
+
+### 🔧 What Will Be Changed (Compared to Existing References)
+
+1. Expansion from single-player to multiplayer
+2. Larger play area using multiple LED matrices
+3. Dynamic events (bombs, ship stalling, LDR-triggered actions)
+4. Score and highscore system
+5. More complex audio-visual feedback
+
+
+## ❓ Project Questions
+
+
+### 🧱 Q1 – What is the system boundary?
+
+**The system includes:**
+
+- the Arduino microcontroller
+- all connected sensors and actuators
+- the software running on the board
+
+**The system does not include:**
+
+- external computers
+- networking or internet services
+
+**All processing happens locally on the microcontroller.**
+
+
+### 🧠 Q2 – Where does intelligence live?
+
+The intelligence lives in:
+
+- the software running on the Arduino
+- the game logic (state management, collisions, random events)
+- the interpretation of player inputs into meaningful game actions
+
+
+### ⚙️ Q3 – What is the hardest technical problem?
+
+The main technical challenges are:
+
+1. synchronizing multiple input and output devices
+2. handling two joysticks and multiple LED matrices
+3. managing  memory and I/O pins
+4. working with LED drivers (MAX7221 for 5088AS bicolor matrix)
+5. scaling the game without losing responsiveness
+
+### 🧪 Q4 – What is the minimum demo?
+
+The minimum working demo includes:
+
+- one LED matrix
+- one joystick
+- basic spaceship movement (dot)
+- obstacle walls
+- a sound feedback on movement
+
+#### 🎥 Demo Video 
+
+[![Watch Video](https://img.shields.io/badge/▶️%20Video-red?style=for-the-badge)](https://youtube.com/shorts/0MiaP8hC6qI?feature=share) 
+
+#### 📸 Setup 
 
 ![WhatsApp Image 2025-12-19 at 18 41 30](https://github.com/user-attachments/assets/5a47b574-f790-4125-9f7d-875066161042)
 
+**Everything beyond this is an extension of the initial matrix project.**
 
-### 💻 Code
-[![View Code](https://img.shields.io/badge/💻%20View%20Code-blue?style=for-the-badge)](https://github.com/LetMeCode01/We-got-a-Space-Problem/blob/sketch_matrix_project.ino)
+### 🧩 Q5 – Why is this not just a tutorial?
 
+**Because:**
 
+1. the game logic is original
+2. multiple hardware components are combined in a non-trivial way
+3. the project involves design decisions in both hardware and software
+4. tutorials are used only as references, not as a complete solution
 
-## Extra ideas for final project-homework
+## 🔌 Do You Need an ESP32?
 
-Adding 2 players for the game - that implies:
+**❌ No, an ESP32 is not required.**
 
-- 2 joysticks
-- 2 LDR sensors
-- 2 active buzzer for players
-- 1 passive buzzer for game sounds and theme
+**Reasons:**
 
-
-
-Also, using minimum 2 LED matrixes, that implies using 2 MAX7219 drivers, OR:
-
-If the 4 MAX7221Max drivers that I ordered will arrive in time, I will use two bicolor LED 5088AS matrixes (red and green), each one using two MAX7221 drivers (they do not work with MAX7219CNG drivers, I learnt that the hard way!). 
-
-I also want to use an Arduino MEGA, if possible(I just want space)
+- the project does not use WiFi or Bluetooth
+- no advanced multitasking is needed
+- an Arduino (MEGA) provides sufficient pins and memory
