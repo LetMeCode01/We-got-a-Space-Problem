@@ -24,14 +24,14 @@
 
 ## 🧾 BOM (Bill of Materials)
 
-###🧠 Main Components
+### 🧠 Main Components
 
 - Arduino board (UNO -> MEGA)
 - Breadboards
 - Connecting wires
 - Resistors and capacitors
 
-###🎮 Input Devices
+### 🎮 Input Devices
 
 - 2 × Joysticks
 - 2 × LDR photoresistors
