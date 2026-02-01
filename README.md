@@ -40,7 +40,7 @@
 ### 📤 Output Devices
 
 - 2 x LED matrices (1088AS)
-- 2 x MAX7221 drivers
+- 2 x MAX7221/MAX7219 drivers
 - LCD display (menu and game information)
 - Active and passive buzzers (player feedback, game sounds and theme)
 
@@ -52,7 +52,7 @@
 Only small references were used, such as:
 
 1. Arduino official documentation
-2. Example code for MAX7221
+2. Example code for MAX7221/MAX7219
 3. Joystick and LED matrix usage references
 4. The game logic, hardware architecture, and gameplay mechanics are original.
 
