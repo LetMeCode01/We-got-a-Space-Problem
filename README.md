@@ -39,8 +39,8 @@
 
 ### 📤 Output Devices
 
-- 2 x LED matrices (5088AS bicolor)
-- 4 x MAX7221 drivers
+- 2 x LED matrices (1088AS)
+- 2 x MAX7221 drivers
 - LCD display (menu and game information)
 - Active and passive buzzers (player feedback, game sounds and theme)
 
@@ -59,7 +59,7 @@ Only small references were used, such as:
 ### 🔧 What Will Be Changed (Compared to Existing References)
 
 1. Expansion from single-player to multiplayer
-2. Larger play area using multiple LED matrices
+2. Larger play area using multiple matrices
 3. Dynamic events (bombs, ship stalling, LDR-triggered actions)
 4. Score and highscore system
 5. More complex audio-visual feedback
@@ -100,7 +100,7 @@ The main technical challenges are:
 1. synchronizing multiple input and output devices
 2. handling two joysticks and multiple LED matrices
 3. managing  memory and I/O pins
-4. working with LED drivers (MAX7221 for 5088AS bicolor matrix)
+4. working with LED drivers
 5. scaling the game without losing responsiveness
 
 ### 🧪 Q4 – What is the minimum demo?
