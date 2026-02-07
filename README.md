@@ -1,4 +1,6 @@
-# 🎮 Backstory / Introduction
+# 🚀 We got a Space Problem!
+
+## 📖 Backstory/ Introduction
 This project started as a classroom Arduino challenge to build a two‑player game on LED matrices. I chose a competitive co‑op maze game because it fits the hardware well (joysticks, LED matrices, buzzer feedback) and allows interesting rules like bombs, traps, and per‑zone objectives. I built it by combining my original gameplay ideas with a menu/EEPROM system, then iterating on controls, sound, and end‑game logic until it felt complete and fair for two players.
 
 ## 🕹️ Game Description
@@ -9,7 +11,7 @@ The game is a fast‑paced two‑player maze battle on a 16x16 grid (split into 
 - Collect food tokens in each zone (you must collect your designated food per zone).
 - Avoid bombs; if you are aligned with a bomb (same row or column in the same zone) you take a hit.
 - Ypu can also take a hit by bombs detonated by another player! You cannot leave the zone until the bomb explodes.
-- Traps can temporarily block movement; wait until you are released.
+- Traps can temporarily block movement; release yourself by shadowing the LDR.
 - The LCD shows current zone, remaining objectives, and hit count.
 - When the game ends, the winner’s score may be saved to the leaderboard.
 
@@ -22,6 +24,7 @@ The game is a fast‑paced two‑player maze battle on a 16x16 grid (split into 
 - 4x buzzers (movement, hits, and effects)
 - 1x LCD
 - Push button (menu/confirm)
+- Condensators
 - Resistors, wires, and breadboard
 
 
