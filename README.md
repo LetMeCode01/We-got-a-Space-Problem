@@ -44,4 +44,4 @@ The game is a fast‑paced two‑player maze battle on a 16x16 grid (split into 
 
 ## 💻 Code
 
-[![View Code](https://img.shields.io/badge/💻%20View%20Code-blue?style=for-the-badge)](https://github.com/LetMeCode01/IntroductionToRobotics/blob/main/Sima_Mihai_Final_Project.ino)
+[![View Code](https://img.shields.io/badge/💻%20View%20Code-blue?style=for-the-badge)](https://github.com/LetMeCode01/We-got-a-Space-Problem/blob/main/Sima_Mihai_Final_Project.ino)
