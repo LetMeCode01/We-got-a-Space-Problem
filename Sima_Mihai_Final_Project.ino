@@ -672,9 +672,9 @@ void spawnFood() {
 
     bool canSpawn = (zoneFoodRemaining[i] > 0) && (!foodActive[i]) && (now - foodRespawnTime[i] >= foodRespawnDelayMs);
     if (canSpawn) {
+      
       int zx = (i % 2) * zoneWidth;
       int zy = (i / 2) * zoneHeight;
-
       int validX[zoneSize * zoneSize];
       int validY[zoneSize * zoneSize];
       int count = 0;
@@ -706,9 +706,8 @@ void blinkFood() {
   if (now - lastFoodBlink > foodBlinkInterval) {
     lastFoodBlink = now;
     for (int i = 0; i < zoneCount; i++) {
-      if (foodActive[i]) {
+      if (foodActive[i])
         foodVisible[i] = !foodVisible[i];
-      }
     }
   }
 }
@@ -717,14 +716,12 @@ void blinkFood() {
 void flashZone() {
   unsigned long startFlash = millis();
   while (millis() - startFlash < zoneFlashDurationMs) {
-    for (int y = 0; y < matrixSize; y++) {
+    for (int y = 0; y < matrixSize; y++)
       lc.setRow(0, y, 0xFF);
-    }
     playBuzzerZone();
     delay(zoneFlashStepDelayMs);
-    for (int y = 0; y < matrixSize; y++) {
+    for (int y = 0; y < matrixSize; y++)
       lc.setRow(0, y, 0);
-    }
     delay(zoneFlashStepDelayMs);
   }
 }
@@ -733,14 +730,12 @@ void flashZone() {
 void flashZonePlayer2() {
   unsigned long startFlash = millis();
   while (millis() - startFlash < zoneFlashDurationMs) {
-    for (int y = 0; y < matrixSize; y++) {
+    for (int y = 0; y < matrixSize; y++)
       lc2.setRow(0, y, 0xFF);
-    }
     playBuzzerZone2();
     delay(zoneFlashStepDelayMs);
-    for (int y = 0; y < matrixSize; y++) {
+    for (int y = 0; y < matrixSize; y++)
       lc2.setRow(0, y, 0);
-    }
     delay(zoneFlashStepDelayMs);
   }
 }
@@ -811,9 +806,8 @@ void collectFood() {
       }
 
       int totalLeft = 0;
-      for (int j = 0; j < zoneCount; j++) {
+      for (int j = 0; j < zoneCount; j++)
         totalLeft += zoneFoodRemaining[j];
-      }
 
       if (!bombPlanned && totalLeft > 0) {
         bombSpawnTime = now + bombSpawnDelayMs;
@@ -881,22 +875,18 @@ void updateBomb() {
         tone(tickPin, bombTickToneHz, bombTickDurationMs);
       }
     }
-  } else {
-    bombVisible = false;
-  }
+  } else  bombVisible = false;
 
   if (bombActive && now >= bombDetonateTime) {
     int player1Zone = getZoneIndex(playerX, playerY);
     int player2Zone = getZoneIndex(player2X, player2Y);
     int tickPin = (bombOwner == 0) ? buzzerPin3 : buzzerPin4;
 
-    if (player1Zone == bombZone && player2Zone == bombZone) {
+    if (player1Zone == bombZone && player2Zone == bombZone) 
       tickPin = buzzerPin3;
-    }
 
-    if (gameSounds == soundsOn) {
+    if (gameSounds == soundsOn) 
       tone(tickPin, bombTickToneHz, bombTickDurationMs);
-    }
 
     if (player1Zone == bombZone && (playerX == bombX || playerY == bombY)) {
       playBuzzerBomb3();
